@@ -50,7 +50,7 @@ function displayQuestion() {
     } else {
         // If there are no more questions, display the final score
         document.getElementById('result').innerHTML = `You scored ${score} out of ${questions.length}!`;
-        document.getElementById('question').innerHTML = "";
+        document.getElementById('question').innerHTML = "GAME OVER!";
         document.getElementById('choices').innerHTML = "";
     }
 }
