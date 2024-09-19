@@ -33,18 +33,20 @@ const correctAnswers = ["Paris", "Da Vinci", "Jupiter", "William Shakespeare", "
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Function to display the current question and its answer choices
+/**
+ * Displays the current question and its answer choices.
+ */
 function displayQuestion() {
     if (currentQuestionIndex < questions.length) {
         // Display the current question
         document.getElementById('question').innerHTML = questions[currentQuestionIndex];
         
-        // Display the answer choices for the current question
-        for (let i = 0; i < 4; i++) {
-            const btn = document.getElementById(`choice${i+1}`);
-            btn.innerHTML = choicesArray[currentQuestionIndex][i];
-            btn.value = choicesArray[currentQuestionIndex][i];
-        }
+        // Display the answer choices for the current question using map
+        choicesArray[currentQuestionIndex].map((choice, index) => {
+            const btn = document.getElementById(`choice${index + 1}`);
+            btn.innerHTML = choice;
+            btn.value = choice;
+        });
     } else {
         // If there are no more questions, display the final score
         document.getElementById('result').innerHTML = `You scored ${score} out of ${questions.length}!`;
@@ -53,7 +55,10 @@ function displayQuestion() {
     }
 }
 
-// Function to check if the selected answer is correct
+/**
+ * Checks if the selected answer is correct.
+ * @param {HTMLElement} btn - The button element that was clicked.
+ */
 function checkAnswer(btn) {
     // If the selected answer is correct, increment the score
     if (btn.value === correctAnswers[currentQuestionIndex]) {
