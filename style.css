@@ -1,41 +1,46 @@
+/* Styling for the entire body of the document */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, teal, white);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    font-family: 'Arial', sans-serif; /* Set the font family */
+    background: linear-gradient(45deg, teal, white); /* Background gradient */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text */
 }
 
+/* Styling for the main container */
 .container {
-    background: white;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    padding: 12px;
+    background: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    width: 90%; /* 90% of the viewport width */
+    max-width: 600px; /* Maximum width of 600px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    padding: 12px; /* Padding inside the container */
 }
 
+/* Styling for buttons */
 button {
-    padding: 10px 20px;
-    background-color: slategray;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: slategray; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px; /* Margin around buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and transform */
 }
 
+/* Styling for buttons on hover */
 button:hover {
-    background-color: teal;
-    transform: scale(1.05);
+    background-color: teal; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
+/* Styling for the result text */
 #result {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: teal;
+    margin-top: 20px; /* Margin above the result text */
+    font-weight: bold; /* Bold text */
+    font-size: 1.3rem; /* Larger font size */
+    color: teal; /* Text color */
 }
